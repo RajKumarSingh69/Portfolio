@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='port.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/079c70dbd2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#portfolio" style="--i:4">Portfolio</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's me</h3>
+            <h1>Raj Kumar</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/raj-kumar-b81b4625a/" style="--i:7"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/RajKumarSingh69" style="--i:8"><i class='bx bxl-github'></i></a>
+                <a href="mailto:rajkr8369@gmail.com" style="--i:9"><i class='bx bx-envelope'></i></a>
+            </div>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </section>
+    <!--------About------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="{{ url_for('static', filename='images/my photo.jpg') }}" sizes="50px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <h1>I am Raj Kumar, I'm a <span class="text2" style="color: #ff0004;"></span></h1>
+                    <br>
+                    <p>I am Raj Kumar, a dedicated Data Science enthusiast with a strong foundation in mathematics and computer science. Proficient in Python, Machine learning, and a range of data analysis tools and MLOPS Tools, I have hands-on experience in data cleaning, exploration, and applying machine learning, Deep learning and NLP algorithms. Write Now I am Exploring The World Of Generative AI.
+                    <br><br> I am an open-source contributor, I am contributing as a Junior ML Engineer at Omdena. In Omdena, I collaborate in 6 different Real World AI Projects and as a Junior ML Engineer, I need to collaborate in each stage of the project pipeline where I write code related to data cleaning, Exploratory Data Analysis, Model Building etc.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Languages</span><br>Python,SQL</li>
+                            <li><span>Data Science</span><br>Machine Learning,Deep Learning,NLP</li>
+                            <li><span>Frameworks</span><br>Scikit-learn, Tensorflow</li>
+                            <li><span>Libraries</span><br>Numpy,Pandas,Matplotlib,Seaborn</li>
+                            <li><span>Tools</span><br>Docker,Git&Github, Power BI, Tableau</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023 - 2023</span><br>ML Intern at Bharat Intern</li>
+                            <li><span>2023 - Current</span><br>Junior ML Engineer at Omdena</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021 - 2024</span><br>BCA From Aryabhatta Knowledge University</li>
+                            <li><span>2019 - 2021</span><br>Intermediate From BN Collegiate High School</li>
+                            <li><span>2018 - 2019</span><br>Gyan Deep Residental School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="{{ url_for('static', filename='images/credit_risk_modeling_picture.jpg') }}">
+                    <div class="layer">
+                        <h3>Credit Risk Modeling</h3>
+                        <p>Credit Risk Modeling using Machine Learning is a sophisticated analytical approach that leverages vast datasets and powerful algorithms to evaluate and predict the creditworthiness of borrowers.</p>
+                        <a href="https://github.com/RajKumarSingh69/Credit-Risk-Modeling"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{ url_for('static', filename='images/flight.jpg') }}">
+                    <div class="layer">
+                        <h3>Flight Price Prediction</h3>
+                        <p>Flight price prediction using Amazon SageMaker is a cutting-edge application of machine learning technology in the aviation industry. Leveraging Amazon SageMaker, a fully managed service for building, training, and deploying machine learning models, this project aims to provide travelers and airlines with accurate forecasts of future flight ticket prices.</p>
+                        <a href="https://github.com/RajKumarSingh69/Flight_Price_Prediction_Sagemaker"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{ url_for('static', filename='images/health_care_image.jpeg') }}">
+                    <div class="layer">
+                        <h3>Advance HealthCare App</h3>
+                        <p>This is an advanced healthcare app where users can check their disease-related health status from anywhere and at any time. This advanced healthcare app saves users money from continuously visiting doctors' clinics. It is advanced because I have included a chatbot that is responsible for answering all questions related to health diseases effectively.</p>
+                        <a href="https://github.com/RajKumarSingh69/HealthCare-App-with-Chatbot"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="work-list additional-projects" style="display: none;">
+                <div class="work">
+                    <img src="{{ url_for('static', filename='images/Movie_Recommendation_system_photo.jpg') }}">
+                    <div class="layer">
+                        <h3>Movie Recommendation System</h3>
+                        <p>This is Content-based movie recommender system trained on a dataset containing 5000 movies. End-to-end Projcet with Stremlit and user can get Top 5 movies Recommendation</p>
+                        <a href="https://github.com/RajKumarSingh69/Movie-Recommendation-System"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{ url_for('static', filename='images/Sri-Lanka.jpg') }}">
+                    <div class="layer">
+                        <h3>Twitter GESI Sentiment Analysis</h3>
+                        <p>Twitter GESI Sentiment Analysis is a project aimed at analyzing tweets related to Gender Equality and Social Inclusion (GESI) In Sri-Lanka using sentiment analysis . In today’s digital age, the proliferation of inaccurate or misleading content online poses a significant challenge to societal well-being and informed public discourse. Particularly in the context of GESI. This project focuses on performing Exploratory Data Analysis for Tamil and Sinhala in sri-lanka to analyze online content related to GESI, aiming to identify and flag misleading inaccurate content.</p>
+                        <a href="https://github.com/RajKumarSingh69/Twitter-GESI-Sentiment-Analysis"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{ url_for('static', filename='images/dimond-price.jpeg') }}">
+                    <div class="layer">
+                        <h3>Diamond Price Prediction</h3>
+                        <p>Diamond price prediction using machine learning is a sophisticated application of data science and predictive analytics in the jewelry industry. The goal of this project is to develop robust models that can accurately estimate the market value of diamonds, taking into account their intrinsic characteristics and market trends.</p>
+                        <a href="https://github.com/RajKumarSingh69/Dimond-price-prediction"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- See More button -->
+        <a href="#" class="btn" id="see-more">See More</a>
+        <!-- Hide button (initially hidden) -->
+        <a href="#" class="btn" id="hide" style="display: none;">Hide</a>
+    </div>
+    <!---------------contact------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> rajkr8369@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 8873398687</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/raj-kumar-b81b4625a/" style="--i:7"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/RajKumarSingh69" style="--i:8"><i class='bx bxl-github'></i></a>
+                        <a href="mailto:rajkr8369@gmail.com" style="--i:9"><i class='bx bx-envelope'></i></a>
+                    </div>
+                    <a href="{{ url_for('static', filename='images/My_resume.pdf') }}" download class="btn btn2">Download Resume</a>
+                </div>
+                <div id="contact">
+                    <div class="container">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <div class="row">
+                            <div class="col-md-6 contact-left">
+                                <form id="contact-form" method="post" action="{{ url_for('send_email') }}">
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                    <input type="email" name="email" placeholder="Your Email" required>
+                                    <textarea name="Message" placeholder="Your Message" required></textarea>
+                                    <button type="submit" class="btn btn2">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        <div class="copyright">
+            <p>Copyright © Raj.Made<i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>
